@@ -3,13 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar with Hamburger</title>
+  <title>LAMBO SKIN</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900">
+<body>
 
+  <style>
+    /* Custom styles */
+    .menu-mobile {
+        display: none;
+       
+    }
+
+    @media (max-width: 768px) {
+        .menu-desktop {
+            display: none;
+        }
+        .menu-mobile {
+            display: block;
+           
+        }
+    }
+    
+</style>
+<!-- header section start here -->
 <header class="bg-gray-900 p-2">
-  <nav class=" flex item-center justify-between text-white text-xl w-[92%]  mx-auto">
+  <nav class=" flex item-center justify-between text-white text-xl w-92  mx-auto p-2">
 
     <!-- logo -->
     <div>
@@ -17,37 +36,59 @@
     </div>
     <!-- logo -->
     
-
-    <!-- Navbar -->
-    <div class="flex items-center px-5">
-      <ul class="flex gap-4  md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 ">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Customer</a></li>
+    <!-- Desktop Menu-->
+    <div class="menu-desktop ">
+      <ul class="flex text-white font-medium text-l items-center  gap-8 mx-auto ">
+        <li><a href="#" class=" px-3 py-2 rounded-md text-lg hover:bg-gray-700 font-semibold  ">Home</a></li>
+        <li><a href="#" class=" px-3 py-2 rounded-md text-lg hover:bg-gray-700 ">About</a></li>
+        <li><a href="#" class=" px-3 py-2 rounded-md text-lg hover:bg-gray-700 ">Products</a></li>
+        <li><a href="#" class=" px-3 py-2 rounded-md text-lg hover:bg-gray-700 ">Customer</a></li>
       </ul>
     </div>
-    <!-- Navbar -->
+ 
+ <!-- Mobile Menu    -->
+    <div id="menu-mobile flex text-white font-medium text-l " >
+      <ul id="menu" class="hidden p-10  space-y-5 px-2 pt-2 pb-3 bg-gray-900  absolute top-11 left-0  w-full    ">
+        <li><a href="#" class=" px-3 py-2  rounded-md text-lg hover:bg-gray-700  ">Home</a></li>
+        <li><a href="#" class=" px-3 py-2 rounded-md text-lg hover:bg-gray-700 ">About</a></li>
+        <li><a href="#" class=" px-3 py-2 rounded-md text-lg hover:bg-gray-700 ">Products</a></li>
+        <li><a href="#" class=" px-3 py-2 rounded-md text-lg hover:bg-gray-700 ">Customer</a></li>
+      </ul>
+    </div>
 
+    <!-- icon start here -->
     <div class="flex gap-4">
       <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"  xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 5L19 12H7.37671M20 16H8L6 3H3M11.5 7L13.5 9M13.5 9L15.5 7M13.5 9V3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
       <svg width="30px" height="30px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" fill="#ffffff"></path> <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="#000000"></path> </g></svg>
-      <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" onclick="onToggleMenu(this)" name="menu" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      
+      <div id="menu-toggle" class="block lg:hidden focus:outline-none">
+        <svg width="64px" height="64px" class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      </div>   
     </div>
-
-
-
-   
-
-
+    <!-- icon end here -->
   </nav>
 </header>
+<!-- header end start here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
-  const navLinks = document.querySelector('.nav-links')
-  function onToggleMenu(e){
-      e.name = e.name === 'menu' ? 'close' : 'menu'
-      navLinks.classList.toggle('top-[9%]')
-  }
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+});
+
 </script>
 </body>
 </html>
